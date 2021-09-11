@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کودکس</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="images/Artboard-22a.jpg">
+
+  <style>
+    @font-face {
+      font-family: "vasiri";
+      src: url("Vazir-Medium.ttf") format('truetype');
+    }
+
+    [lang=fa] {
+      font-family: "vasiri";
+    }
+
+    .rtl {
+      direction: rtl !important;
+    }
+
+    .ltr {
+      direction: rtl !important;
+    }
+
+    .second-color {
+      color: goldenrod;
+    }
+
+    /* header */
+    header {
+      position: relative;
+      width: 100%;
+      background: #ffffffe6;
+      padding: 0.5rem 0 0.1rem 0;
+      z-index: 15 !important;
+      box-shadow: 0px 2px #7d7d7d;
+
+    }
+
+    header nav {
+      position: relative;
+    }
+
+    header nav>ul {
+      display: flex;
+      list-style: none;
+    }
+
+    header nav>ul>li>a {
+      color: black;
+      padding: 1rem;
+    }
+
+    header nav>ul>li>a:link {
+      color: black;
+    }
+
+    header nav>ul>li>a:visited {
+      color: #1d1d1d;
+    }
+
+    header nav>ul>li>a:hover {
+      color: black;
+      text-decoration: underline;
+    }
+
+    header nav>ul>li>a:active {
+      color: #1d1d1d;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    header nav>ul>li>div {
+      display: none;
+      position: absolute;
+      top: 46px;
+      right: 50%;
+      background-image: linear-gradient(180deg, #272626, #000000eb);
+      color: black;
+      width: 95vw;
+      padding: 2rem;
+      line-height: 2rem;
+      height: auto;
+      transform: translate(50%, 0px);
+      box-shadow: inset 1px 1px 20px 11px #000000;
+    }
+
+    header nav>ul>li:hover>div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header nav>ul>li>div>ul {
+      list-style: none;
+      display: block;
+      width: 100%;
+      padding: 0px;
+      border-left: 1px solid #333333;
+    }
+
+    header nav>ul>li>div>ul>li {
+      line-height: 1rem;
+      border: 1px solid #333333;
+      border-right: none;
+      border-left: none;
+      line-height: 5rem;
+      padding: 1rem 0.5rem;
+    }
+
+    header nav>ul>li>div>ul>li:first-child {
+      border-top: none !important;
+    }
+
+    header nav>ul>li>div>ul>li>a:link {
+      color: white;
+    }
+
+    header nav>ul>li>div>ul>li>a:visited {
+      color: goldenrod;
+    }
+
+    header nav>ul>li>div>ul>li>a:hover {
+      color: black;
+      background: white;
+    }
+
+    header nav>ul>li>div>ul>li:hover {
+      background: white;
+    }
+
+    header nav>ul>li>div>ul>li>a:active {
+      color: white;
+    }
+
+    header nav>ul>li>div>ul:nth-child(3),
+    header nav>ul>li>div>ul:nth-child(3)>li {
+      border: none;
+    }
+
+    header nav>ul>li>div>ul:nth-child(3)>li:hover {
+      background: transparent;
+    }
+
+    header nav>ul>li>div>ul:nth-child(3) img {
+      width: 100%;
+    }
+
+
+
+
+    .swiper {
+      width: 100%;
+      height: auto;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .myswper {
+      position: relative !important;
+    }
+
+    .myswper .swiper-horizontal>.swiper-pagination-bullets,
+    .myswper .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .myswper .swiper-pagination-custom,
+    .myswper .swiper-pagination-fraction {
+      bottom: 100px;
+      left: 0;
+      width: 100%;
+    }
+
+    /* scrool part */
+    #scrollmagic {
+      overflow: hidden !important;
+      padding: 1rem 0rem;
+    }
+
+    .scroll-container {
+      padding: 2rem;
+    }
+
+    #scrollmagic img {
+      max-width: 100%;
+    }
+
+    .side-eleman {
+      text-align: center;
+      width: 100%;
+      position: relative;
+      /* background: yellow;
+      border: 1px solid black; */
+    }
+
+    .absolute-eleman {
+      position: absolute;
+      top: -1.5rem;
+      left: 0rem;
+      width: 1rem;
+    }
+
+    #left-side.animate .side-eleman .absolute-eleman{
+      animation-name:mobilemation;
+      animation-duration:1.5s;
+    }
+    @keyframes mobilemation{
+      from{
+        margin:-1rem -3rem;
+      }
+      to{
+        margin:0;
+      }
+    }
+    #right-side.animate .side-eleman .absolute-eleman{
+      animation-name:rmobilemation;
+      animation-duration:1.5s;
+    }
+    @keyframes rmobilemation{
+      from{
+        margin-top:-1rem;
+        margin: -1rem 4rem;
+      }
+      to{
+        margin-top:0rem;
+        margin: 0rem;
+      }
+    }
+    /* #left-side .absolute-eleman {
+      position: absolute;
+      top: -1.5rem;
+      left: 2rem;
+    } */
+
+    .change-position-earphones-ruller {
+      width: 100%;
+    }
+
+    .z-index-9 {
+      z-index: 9 !important;
+    }
+
+    .z-index-10 {
+      z-index: 10 !important;
+    }
+
+    .z-index-11 {
+      z-index: 11 !important;
+    }
+
+    .z-index-12 {
+      z-index: 12 !important;
+    }
+
+    .tall-img {
+      height: 7rem;
+    }
+
+    /* .go-up-usb-watch {
+      margin-top: -273px;
+    } */
+
+    /* .change-position-earphones-ruller {
+      margin-top: -2rem;
+      margin-left: -2rem;
+    } */
+
+    /* dark-bg */
+    #product {
+      background: url("images/parallax-home-1.jpg");
+    }
+
+    /* parallex */
+    .paralex-section {
+      background-image: url("images/paralex-5.jpg");
+      min-height: 600px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .big-title {
+      font-size: 1.8rem !important;
+      text-shadow: -3px 3px 2px #3e3c3c;
+    }
+
+    .cube {
+      width: 30%;
+      text-align: center;
+      margin: 0 auto;
+      height: 100px;
+      -webkit-transition: -webkit-transform .33s;
+      transition: transform .33s;
+      /* Animate the transform properties */
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      /* <-NB */
+    }
+
+    /* The two faces of the cube */
+    .frontSide,
+    .bottomSide {
+      background: #1d1d1d;
+      text-shadow: 4px 4px 4px #000;
+      border: 1px solid #b2c5c5;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      /* -webkit-box-shadow: 0 5px 20px #00f9ff, 0 0 8px 5px #00f9ff inset; */
+      /* box-shadow: 0 5px 20px #00f9ff, 0 0 8px 5px #00f9ff inset; */
+      height: 97px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frontSide {
+      -webkit-transform: translateZ(50px);
+      transform: translateZ(50px);
+    }
+
+    .bottomSide {
+      -webkit-transform: rotateX(-90deg) translateZ(-50px);
+      transform: rotateX(-90deg) translateZ(-50px);
+    }
+
+    .cube:hover {
+      -webkit-transform: rotateX(89deg);
+      transform: rotateX(89deg);
+      /* Text bleed at 90º */
+    }
+
+    .seprator {
+      margin-bottom: 1rem;
+    }
+
+
+    .bottomSide {
+      -webkit-transform: rotateX(-90deg) translateZ(-50px);
+      transform: rotateX(-90deg) translateZ(-50px);
+    }
+
+    .cube:hover {
+      -webkit-transform: rotateX(89deg);
+      transform: rotateX(89deg);
+      /* Text bleed at 90º */
+    }
+
+    .paralex-section img,
+    .paralex-section h2 {
+      cursor: pointer;
+    }
+
+    .paralex-section img:hover,
+    .paralex-section h2:hover {
+      animation-name: rescale;
+      animation-duration: 0.2s;
+    }
+
+    .paralex-section img {
+      max-width: 100%;
+    }
+
+
+    @keyframes rescale {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.2);
+      }
+
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .mt-6 {
+      margin-top: 10rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 10rem;
+    }
+
+    .flip-parent {
+      position: relative;
+      perspective: 1200px;
+      vertical-align: baseline;
+      margin-bottom: -0px;
+    }
+
+    .flip {
+      -webkit-transform-origin: center bottom;
+      -moz-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+      -o-transform-origin: center bottom;
+      /* transform-origin: center bottom; */
+
+      box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+      scale: (1);
+      transform: translateY(0px);
+      height: auto;
+      width: 100%;
+      color: white;
+      font-size: 24px;
+      /* CENTER OUR CONTENT  */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip:before {
+      width: 100%;
+      z-index: 2;
+      text-transform: uppercase;
+    }
+
+    /* footer */
+    footer {
+      background: #1d1d1d;
+      padding: 3rem 0;
+    }
+
+    .menu-hider {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      cursor: pointer;
+      background: #00000078;
+      z-index: 15;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      padding: 0.5rem;
+      top: 0px;
+      right: 0px;
+      width: 252px;
+      height: 100vh;
+      background: white;
+      box-shadow: 1px 0px 4px #000000;
+      z-index: 16;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+    }
+
+    .mobile-menu ul li {
+      line-height: 3rem;
+    }
+
+    .mobile-menu ul li a {
+      color: black;
+    }
+
+
+    @media (min-width:768px) {
+
+      /* header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffffe6;
+        padding: 1rem 0;
+        z-index: 15 !important;
+        box-shadow: 0px 2px 8px 2px #7d7d7d;
+
+      }
+
+      .big-title {
+        font-size: 5rem !important;
+        text-shadow: -3px 3px 2px #3e3c3c;
+      }
+
+      /* .change-position-earphones-ruller {
+        margin-top: -11rem;
+        margin-left: -12rem;
+      } */
+
+      .tall-img {
+        height: auto;
+      }
+
+      header nav>ul>li>a {
+        padding: 3rem;
+      }
+
+      .side-eleman {
+        text-align: center;
+        width: 100%;
+        min-height: 13rem;
+        position: relative;
+      }
+
+      .absolute-eleman {
+        position: absolute;
+        /* top: -1.5rem;
+        left: -4rem; */
+        width: 100%;
+      }
+      #scrollmagic {
+      overflow: hidden !important;
+      padding: 15rem 0rem;
+       }
+    }
+  </style>
+  <link rel="stylesheet" href="scroll.css">
+</head>
+
+<body>
+  <header class="rtl">
+    <nav>
+      <ul class="d-block d-sm-none">
+        <li>
+          <a id="fa-bars">
+            <i class="fas fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="d-none d-sm-flex">
+        <li><a href="#">شرکت کودکس</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">محصولات</a>
+          <div>
+            <ul>
+              <li><a href="#">قوطی</a></li>
+              <li><a href="#">انواع ظرف</a></li>
+              <li><a href="">لیبل</a></li>
+              <li><a href="">کارتن</a></li>
+            </ul>
+            <ul>
+              <li><a href="">طراحی انواع لیبل</a></li>
+            </ul>
+            <ul>
+              <li><img src="images/active.jpg" alt=""></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container-fluid p-0">
+    <!-- <section id="mobile-section" class="d-block d-sm-none">
+      <div class="swiper myswper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="slide-1.jpg" alt="طراحی لیبل شرکت کودکس">
+          </div>
+          <div class="swiper-slide">
+            <img src="slide-2.jpg" alt="طراحی جعبه شرکت کودکس">
+          </div>
+          <div class="swiper-slide">
+            <img src="slide-3.jpg" alt="طراحی انواع ظرف شرکت کودکس">
+          </div>
+        </div>
+       
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section> -->
+    <section class="">
+      <div class="flip-parent">
+        <div class="flip" id="first">
+          <div class="swiper myswper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="slide-1.jpg" alt="طراحی لیبل شرکت کودکس">
+              </div>
+              <div class="swiper-slide">
+                <img src="slide-2.jpg" alt="طراحی جعبه شرکت کودکس">
+              </div>
+              <div class="swiper-slide">
+                <img src="slide-3.jpg" alt="طراحی انواع ظرف شرکت کودکس">
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="scrollmagic">
+      <div class="scroll-container">
+        <div class="d-flex justify-content-center">
+          <div class="col-4" id="left-side">
+            <div class="samerow d-flex flex-nowrap justify-content-end" id="first-left-side-row">
+              <div class="side-eleman z-index-10" id="ls-f-f">
+                <div class="absolute-eleman">
+                  <img src="images/Watch.png" alt="">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="ls-f-s">
+                <div class="absolute-eleman">
+                  <img src="images/ruler.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="samerow d-flex flex-nowrap" id="sec-left-side-row">
+              <div class="side-eleman z-index-10" id="ls-s-f">
+                <div class="absolute-eleman">
+                  <img src="images/pen-1.png" alt="">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="ls-s-s">
+                <div class="absolute-eleman">
+                  <img src="images/feather.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="samerow d-flex flex-nowrap" id="third-left-side-row">
+              <div class="side-eleman z-index-10" id="ls-th-f">
+                <div class="absolute-eleman">
+                  <img src="images/pen-2.png" alt="" class="tall-img">
+                </div>
+              </div>
+              <div class="side-eleman z-index-11" id="ls-th-th">
+                <div class="absolute-eleman">
+                  <img src="images/glasses.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="samerow d-flex flex-nowrap rtl" id="forth-left-side-row">
+              <div class="side-eleman z-index-12" id="ls-forth-f">
+                <div class="absolute-eleman">
+                  <img src="images/plane.png" alt="">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="ls-forth-s">
+                <div class="absolute-eleman">
+                  <img src="images/tool.png" alt="" class="tall-img">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="ls-forth-th">
+                <div class="absolute-eleman">
+                  <img src="images/coffee.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="go-up-usb-watch" id="fifth-left-side-row">
+              <div class="samerow d-flex flex-nowrap">
+                <div class="side-eleman z-index-10" id="ls-fifth-f">
+                  <div class="absolute-eleman">
+                    <img src="images/usb-1.jpg" alt="">
+                  </div>
+                </div>
+                <div class="side-eleman z-index-10" id="ls-fifth-s">
+                  <div class="absolute-eleman">
+                    <img src="images/usb-2.jpg" alt="">
+                  </div>
+                </div>
+                <div class="side-eleman z-index-11" id="ls-fifth-th">
+                  <div class="absolute-eleman">
+                    <img src="images/watch-2.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="samerow d-flex flex-nowrap" id="sixth-left-side-row">
+              <div class="side-eleman z-index-10" id="ls-sixth-f">
+                <div class="absolute-eleman">
+                  <img src="images/camerow-1.png" alt="">
+                </div>
+              </div>
+              <div class="side-eleman z-index-11" id="ls-sixth-s">
+                <div class="absolute-eleman">
+                  <img src="images/palet.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4" id="center-side">
+            <div class="side-eleman z-index-9" id="center-img">
+              <img src="images/tablet.jpg" alt="" class="w-100">
+            </div>
+          </div>
+
+
+          <div class="col-4" id="right-side">
+            <div class="samerow d-flex flex-nowrap" id="first-right-side-row">
+              <div class="side-eleman z-index-11" id="rs-f-f">
+                <div class="absolute-eleman">
+                  <img src="images/pencil.jpg" alt="" class="tall-img">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="rs-f-s">
+                <div class="absolute-eleman">
+                  <img src="images/phone-2.jpg" alt="">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="rs-f-th">
+                <div class="absolute-eleman">
+                  <img src="images/tool-2.png" alt="" class="tall-img">
+                </div>
+              </div>
+            </div>
+            <div class="change-position-earphones-ruller">
+              <div class="samerow d-flex flex-nowrap" id="sec-right-side-row">
+                <div class="side-eleman z-index-10" id="rs-s-s">
+                  <div class="absolute-eleman">
+                    <img src="images/earphones-2.png" alt="">
+                  </div>
+                </div>
+                <div class="side-eleman z-index-11" id="rs-s-th">
+                  <div class="absolute-eleman">
+                    <img src="images/ruler.png" alt="">
+                  </div>
+                </div>
+                <div class="side-eleman z-index-11" id="rs-s-forth">
+                  <div class="absolute-eleman">
+                    <img src="images/knife.png" alt="" class="tall-img">
+                  </div>
+                </div>
+                <div class="side-eleman z-index-11" id="rs-s-fifth">
+                  <div class="absolute-eleman">
+                    <img src="images/chalks.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="samerow d-flex flex-nowrap" id="third-right-side-row">
+
+              <div class="side-eleman z-index-10" id="rs-th-f">
+                <div class="absolute-eleman">
+                  <img src="images/phone-2.jpg" alt="">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="rs-th-s">
+                <div class="absolute-eleman">
+                  <img src="images/ruler.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="samerow d-flex flex-nowrap" id="forth-right-side-row">
+              <div class="side-eleman z-index-10" id="rs-forth-f">
+                <div class="absolute-eleman">
+                  <img src="images/camerow-1.png" alt="">
+                </div>
+              </div>
+              <div class="side-eleman z-index-10" id="rs-forth-s">
+                <div class="absolute-eleman">
+                  <img src="images/oy.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="side-eleman z-index-10" id="rs-fifth-f">
+              <div class="absolute-eleman">
+                <img src="images/rubber-2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <div class="mb-6"></div>
+  <section class="dark-bg" id="product">
+    <div class="py-5">
+      <h2 class="text-center text-white">
+        محصولات
+      </h2>
+    </div>
+    <div class="p-5">
+      <div class="container">
+        <div class="swiper product-swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="slide-1.jpg" alt="طراحی لیبل شرکت کودکس">
+            </div>
+            <div class="swiper-slide">
+              <img src="slide-2.jpg" alt="طراحی جعبه شرکت کودکس">
+            </div>
+            <div class="swiper-slide">
+              <img src="slide-3.jpg" alt="طراحی انواع ظرف شرکت کودکس">
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-5">
+    <h2 class="text-center">
+      <span class="second-color">انتخاب</span> بهترین ها
+    </h2>
+  </section>
+  <section class="paralex-section" id="paralex-section">
+    <div class="col-12 col-md-6">
+      <div class="text-center text-white">
+        <img src="images/final-home-graphic-last-1.png" alt="">
+        <h2 class="big-title">
+          کودکس اولین انتخاب
+        </h2>
+        <img src="images/final-graphic-1.png" alt="">
+        <div class="seprator"></div>
+        <div class="cube rtl">
+          <div class="frontSide">
+            <a href="#" class="text-white">ادامه ...</a>
+          </div>
+          <div class="bottomSide">
+            <a href="#" class="text-white">بیشتر بخوانید</a>
+          </div>
+        </div>
+        <div class="seprator"></div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p class="text-white text-center">طراحی و اجرا شرکت کودکس</p>
+  </footer>
+  </div>
+  <div class="menu-hider d-none" id="menu-hider"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+          var rs_f_f_IMG=Array();
+           rs_f_f_IMG["width"] = $("#rs-f-f .absolute-eleman img").width();
+           rs_f_f_IMG["height"] = $("#rs-f-f .absolute-eleman img").height();
+          //  console.log(rs_f_f_IMG["width"]);
+           console.log($("#ls-forth-f .absolute-eleman img").height());
+           console.log($("#center-side .side-eleman img").height());
+           var leftside = $("#center-side .side-eleman img").height()/6;
+           var rightside = $("#center-side .side-eleman img").height()/5;
+           console.log(leftside);
+
+           $("#rs-f-f").height(rightside);
+           $("#rs-f-th").height(rightside);
+           $("#rs-s-s").height(rightside);
+           $("#rs-s-th").height(rightside);
+           $("#rs-s-forth").height(rightside);
+           $("#rs-s-fifith").height(rightside);
+           $("#rs-th-f ").height(rightside);
+           $("#rs-th-s").height(rightside);  
+           $("#rs-forth-f").height(rightside);
+           $("#rs-forth-s").height(rightside);         
+           $("#rs-fifth-f ").height(rightside);
+
+           $("#rs-f-f .absolute-eleman").height(rightside);
+           $("#rs-f-th .absolute-eleman").height(rightside);
+           $("#rs-s-s .absolute-eleman").height(rightside);
+           $("#rs-s-th .absolute-eleman").height(rightside);
+           $("#rs-s-forth .absolute-eleman").height(rightside);
+           $("#rs-s-fifith .absolute-eleman").height(rightside);
+           $("#rs-th-f  .absolute-eleman").height(rightside);
+           $("#rs-th-s .absolute-eleman").height(rightside);  
+           $("#rs-forth-f .absolute-eleman").height(rightside);
+           $("#rs-forth-s .absolute-eleman").height(rightside);         
+           $("#rs-fifth-f  .absolute-eleman").height(rightside);
+
+
+           $("#ls-f-f").height(leftside);
+           $("#ls-f-s").height(leftside);
+           $("#ls-s-s").height(leftside);
+           $("#ls-s-f").height(leftside);
+           $("#ls-th-f ").height(leftside);
+           $("#ls-th-th").height(leftside);
+           $("#ls-forth-f").height(leftside);
+           $("#ls-forth-s").height(leftside);
+           $("#ls-forth-th").height(leftside);
+           $("#ls-fifth-f").height(leftside);
+           $("#ls-fifth-s").height(leftside);
+           $("#ls-fifth-th").height(leftside);
+           $("#ls-sixth-f").height(leftside);
+           $("#ls-sixth-s").height(leftside);
+
+           $("#ls-f-f .absolute-eleman").height(leftside);
+           $("#ls-f-s .absolute-eleman").height(leftside);
+           $("#ls-s-s .absolute-eleman").height(leftside);
+           $("#ls-s-f .absolute-eleman").height(leftside);
+           $("#ls-th-f  .absolute-eleman").height(leftside);
+           $("#ls-th-th .absolute-eleman").height(leftside);
+           $("#ls-forth-f.absolute-eleman").height(leftside);
+           $("#ls-forth-s .absolute-eleman").height(leftside);
+           $("#ls-forth-th  .absolute-eleman").height(leftside);
+           $("#ls-fifth-f  .absolute-eleman").height(leftside);
+           $("#ls-fifth-s  .absolute-eleman").height(leftside);
+           $("#ls-fifth-th  .absolute-eleman").height(leftside);
+           $("#ls-sixth-f  .absolute-eleman").height(leftside);
+           $("#ls-sixth-s  .absolute-eleman").height(leftside);
+    $(window).resize(function(){
+      location.reload();
+    });
+    if($(window).width() <= 320){
+      $("#ls-th-f .absolute-eleman").css("left","-1.5rem");
+      $("#ls-forth-s .absolute-eleman").css("left","-2.5rem");
+      $("#rs-th-f .absolute-eleman").css("left","1rem");
+      $(window).on('scroll', function () {
+        if(!$("#right-side").hasClass("animate")){
+          $("#right-side").addClass("animate");
+        }
+        if(!$("#left-side").hasClass("animate")){
+          $("#left-side").addClass("animate");
+        }
+        
+      });
+
+    }
+    $(function () {
+      var get_first_elemant_position = $("#first-left-side-row .side-eleman:first-child").position().top;
+      var get_sec_elemant_position = $("#sec-left-side-row .side-eleman:first-child").position().top;
+      var get_third_elemant_position = $("#third-left-side-row .side-eleman:first-child").position().top;
+      var get_forth_elemant_position = $("#forth-left-side-row .side-eleman:first-child").position().top;
+      var get_fifth_elemant_position = $("#fifth-left-side-row .side-eleman:first-child").position().top;
+      var get_sixth_elemant_position = $("#sixth-left-side-row .side-eleman:first-child").position().top;
+      window.get_first_elemant_position = get_first_elemant_position;
+      window.half_first_elemant_position = parseInt(get_first_elemant_position / 2);
+      window.half_sec_elemant_position = parseInt(get_sec_elemant_position / 2);
+      window.half_third_elemant_position = parseInt(get_third_elemant_position / 2);
+      window.half_forth_elemant_position = parseInt(get_forth_elemant_position / 2);
+      window.half_fifth_elemant_position = parseInt(get_fifth_elemant_position / 2);
+      window.half_sixth_elemant_position = parseInt(get_sixth_elemant_position / 2);
+      const myswper = new Swiper('.myswper', {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+      const otherswiper = new Swiper('.otherswiper', {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+
+      const productswiper = new Swiper('.product-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        lazy: true,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
+
+
+      // var wherImI = $(window).scrollTop();
+      // if (wherImI != 0) {
+      //   $(window).scrollTop(0);
+      // }
+      $("#fa-bars").on("click", () => {
+        $("#menu-hider").toggleClass("d-none");
+        var headeeItems = $("#header nav>ul:nth-child(2)>li");
+        var aside = document.createElement("aside");
+        var ulsid = document.createElement("ul");
+        aside.appendChild(ulsid);
+        $(aside).addClass("mobile-menu");
+        $("header>nav>ul:nth-child(2)>li").clone().appendTo(ulsid);
+        // $(ulsid).clone().appendTo("header>nav>ul:nth-child(2)>li");
+        $(ulsid).children().find("li img").remove();
+        $("body").append($(aside));
+      });
+      $("#menu-hider").on("click", function () {
+        $("#menu-hider").toggleClass("d-none");
+        $("aside").remove();
+      });
+      $(window).on('scroll', function () {
+        $('.flip').each(function () {
+          var scrollTop = $(window).scrollTop(),
+            parentElementOffsetTop = $(this).parent().offset().top,
+            parentDistanceTop = (parentElementOffsetTop - scrollTop);
+          var elementHeight = $(this).height();
+          var distanceBottom = (parentDistanceTop + elementHeight);
+          var opacity = (distanceBottom / elementHeight);
+          var rotateSpeed = ((parentDistanceTop / 8).toFixed(2) * -1);
+
+          if (rotateSpeed <= 0) {
+            rotateSpeed = 0;
+          } else if (rotateSpeed >= 90) {
+            rotateSpeed = 90;
+          }
+          $(this).find(".pixel-counter").html(distanceBottom +
+            "px is the parents bottom-               distance to top of viewport");
+          $(this).css({
+            "transform": " translateY(0px)  rotateX(" + rotateSpeed + "deg)",
+            "opacity": opacity
+          });
+        });
+        if ($(window).width() > 768) {
+          var wherImI = $(window).scrollTop();
+          if (wherImI < window.half_first_elemant_position) {
+            $("#rs-f-f .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "24rem"
+            });
+            $("#rs-f-s .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "24rem"
+            });
+            $("#rs-f-th .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "24rem"
+            });
+            $("#ls-f-f .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "-3rem"
+            });
+            $("#ls-f-s .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "-3rem"
+            });
+
+            $("#rs-s-s .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "24rem"
+            });
+            $("#rs-s-th .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "24rem"
+            });
+            $("#rs-s-forth .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "7rem"
+            });
+            $("#rs-s-fifith .absolute-eleman").css({
+              "top": "0",
+              "left": "1.5rem"
+            });
+
+            $("#ls-s-s .absolute-eleman").css({
+              "top": "-3rem",
+              "left": "-3rem"
+            });
+            $("#ls-s-f .absolute-eleman").css({
+              "top": "-3rem",
+              "left": "-3rem"
+            });
+
+
+
+            $("#rs-th-f .absolute-eleman").css({
+              "top": "-10rem",
+              "left": "24rem"
+            });
+            $("#rs-th-s .absolute-eleman").css({
+              "top": "-15rem",
+              "left": "24rem"
+            });
+
+            $("#ls-th-f .absolute-eleman").css({
+              "top": "-3rem",
+              "left": "-3rem"
+            });
+            $("#ls-th-th .absolute-eleman").css({
+              "top": "-3rem",
+              "left": "-13rem"
+            });
+
+            $("#rs-forth-f .absolute-eleman").css({
+              "top": "4rem",
+              "left": "20rem"
+            });
+            $("#rs-forth-s .absolute-eleman").css({
+              "top": "-40rem",
+              "left": "10rem"
+            });
+
+            $("#ls-forth-f .absolute-eleman").css({
+              "top": "-8rem",
+              "left": "-23rem"
+            });
+            $("#ls-forth-s .absolute-eleman").css({
+              "top": "-3rem",
+              "left": "-3rem"
+            });
+            $("#ls-forth-th .absolute-eleman").css({
+              "top": "-3rem",
+              "left": "-3rem"
+            });
+
+            $("#rs-fifth-f .absolute-eleman").css({
+              "top": "2rem",
+              "left": "20rem"
+            });
+
+            $("#ls-fifth-f .absolute-eleman").css({
+              "top": "-8rem",
+              "left": "-23rem"
+            });
+            $("#ls-fifth-s .absolute-eleman").css({
+              "top": "-8rem",
+              "left": "-23rem"
+            });
+            $("#ls-fifth-th .absolute-eleman").css({
+              "top": "-8rem",
+              "left": "-23rem"
+            });
+
+            $("#ls-sixth-f .absolute-eleman").css({
+              "top": "-8rem",
+              "left": "-23rem"
+            });
+            $("#ls-sixth-s .absolute-eleman").css({
+              "top": "-8rem",
+              "left": "-23rem"
+            });
+          }
+          // first right side
+          if ($(window).scrollTop() > window.half_first_elemant_position) {
+            if (-15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) <= 2.52) {
+              $("#first-right-side-row .side-eleman:first-child .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_first_elemant_position) / 32.91) + "rem"
+              });
+
+              $("#first-left-side-row .side-eleman:first-child .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": -3 + (($(window).scrollTop() - window.half_first_elemant_position) / 263.33) + "rem"
+              });
+            }
+          }
+          if ($(window).scrollTop() > (window.half_first_elemant_position) + 250) {
+            if (-15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) <= 2.52) {
+              $("#first-right-side-row .side-eleman:nth-child(2) .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_first_elemant_position) / 32.91) + "rem"
+              });
+
+              $("#first-left-side-row .side-eleman:nth-child(2) .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": -3 + (($(window).scrollTop() - window.half_first_elemant_position) / 263.33) + "rem"
+              });
+            }
+          }
+          if ($(window).scrollTop() > (window.half_first_elemant_position) + 250) {
+            if (-15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) <= 2.52) {
+              $("#first-right-side-row .side-eleman:nth-child(3) .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_first_elemant_position) / 19.91) + "rem"
+              });
+            }
+          }
+          // sec left side
+          if ($(window).scrollTop() > window.half_sec_elemant_position) {
+            if (-15 + (($(window).scrollTop() - window.half_sec_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-s-s .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_first_elemant_position) / 21.91) + "rem"
+              });
+
+              $("#ls-s-f .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": -3 + (($(window).scrollTop() - window.half_first_elemant_position) / 263.33) + "rem"
+              });
+            }
+          }
+          if ($(window).scrollTop() > (window.half_first_elemant_position) + 250) {
+            if (-15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-s-th .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_first_elemant_position) / 32.91) + "rem"
+              });
+
+              $("#ls-s-s .absolute-eleman").css({
+                "top": -3 + (($(window).scrollTop() - window.half_first_elemant_position) / 263.33) + "rem",
+                "left": -3 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.33) + "rem"
+              });
+            }
+          }
+          if ($(window).scrollTop() > (window.half_first_elemant_position) + 250) {
+            if (-15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-s-forth .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) + "rem",
+                "left": 7 - (($(window).scrollTop() - window.half_first_elemant_position) / 39.91) + "rem"
+              });
+            }
+          }
+
+          if ($(window).scrollTop() > (window.half_first_elemant_position) + 350) {
+            if (-15 + (($(window).scrollTop() - window.half_first_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-s-fifth .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_first_elemant_position) / 1052.66) +
+                  "rem",
+                "left": 9 - (($(window).scrollTop() - window.half_first_elemant_position) / 1032.91) + "rem"
+              });
+            }
+          }
+
+          // third side
+          if ($(window).scrollTop() > window.half_third_elemant_position) {
+            if (-15 + (($(window).scrollTop() - window.half_third_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-th-f .absolute-eleman").css({
+                "top": -10 + (($(window).scrollTop() - window.half_third_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_third_elemant_position) / 40.91) + "rem"
+              });
+
+              $("#ls-th-f .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_third_elemant_position) / 100.66) +
+                  "rem",
+                "left": -3 + (($(window).scrollTop() - window.half_third_elemant_position) / 52.33) + "rem"
+              });
+            }
+          }
+          if ($(window).scrollTop() > (window.half_third_elemant_position) + 250) {
+            if (-15 + (($(window).scrollTop() - window.half_third_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-th-s .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_third_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_third_elemant_position) / 42.91) + "rem"
+              });
+
+              $("#ls-th-th .absolute-eleman").css({
+                "top": -3 + (($(window).scrollTop() - window.half_third_elemant_position) / 200.33) + "rem",
+                "left": -13 + (($(window).scrollTop() - window.half_third_elemant_position) / 38.33) + "rem"
+              });
+            }
+          }
+          // forth side
+          if ($(window).scrollTop() > window.half_forth_elemant_position) {
+            if (-15 + (($(window).scrollTop() - window.half_forth_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-forth-f .absolute-eleman").css({
+                "top": "14rem",
+                "left": 24 - (($(window).scrollTop() - window.half_forth_elemant_position) / 40.91) + "rem"
+              });
+
+              $("#ls-forth-f .absolute-eleman").css({
+                "top": -8 + (($(window).scrollTop() - window.half_forth_elemant_position) / 50.66) + "rem",
+                "left": -23 + (($(window).scrollTop() - window.half_forth_elemant_position) / 23.33) + "rem"
+              });
+            }
+          }
+          if ($(window).scrollTop() > (window.half_forth_elemant_position) + 250) {
+            if (-15 + (($(window).scrollTop() - window.half_forth_elemant_position) / 52.66) <= 2.52) {
+              $("#rs-forth-s .absolute-eleman").css({
+                "top": -15 + (($(window).scrollTop() - window.half_forth_elemant_position) / 52.66) + "rem",
+                "left": 24 - (($(window).scrollTop() - window.half_forth_elemant_position) / 42.91) + "rem"
+              });
+
+              $("#ls-forth-s .absolute-eleman").css({
+                "top": -3 + (($(window).scrollTop() - window.half_forth_elemant_position) / 200.33) + "rem",
+                "left": -13 + (($(window).scrollTop() - window.half_forth_elemant_position) / 38.33) + "rem"
+              });
+            }
+          }
+
+          if ($(window).scrollTop() > (window.half_forth_elemant_position) + 350) {
+            if (-15 + (($(window).scrollTop() - window.half_forth_elemant_position) / 52.66) <= 2.52) {
+
+              $("#ls-forth-th .absolute-eleman").css({
+                "top": -3 + (($(window).scrollTop() - window.half_forth_elemant_position) / 200.33) + "rem",
+                "left": -13 + (($(window).scrollTop() - window.half_forth_elemant_position) / 38.33) + "rem"
+              });
+            }
+          }
+       
+          if ($(window).scrollTop() > window.half_fifth_elemant_position) {
+          if (-15 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 52.66) <= 2.52) {
+            $("#rs-fifth-f .absolute-eleman").css({
+              "top": 2 - (($(window).scrollTop() - window.half_fifth_elemant_position) / 600.66) + "rem",
+              "left": 20 - (($(window).scrollTop() - window.half_fifth_elemant_position) / 28.91) + "rem"
+            });
+
+            $("#ls-fifth-f .absolute-eleman").css({
+              "top": -8 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 150.66) + "rem",
+              "left": -23 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 23.33) + "rem"
+            });
+          }
+        }
+        if ($(window).scrollTop() > (window.half_fifth_elemant_position) + 250) {
+          if (-15 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 52.66) <= 2.52) {
+            $("#ls-fifth-s .absolute-eleman").css({
+              "top": -3 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 200.33) + "rem",
+              "left": -13 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 58.33) + "rem"
+            });
+          }
+        }
+
+
+        if ($(window).scrollTop() > (window.half_fifth_elemant_position) + 350) {
+          if (-15 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 52.66) <= 2.52) {
+            $("#ls-fifth-th .absolute-eleman").css({
+              "top": -3 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 200.33) + "rem",
+              "left": -13 + (($(window).scrollTop() - window.half_fifth_elemant_position) / 38.33) + "rem"
+            });
+          }
+        }
+        // sixth side
+        if ($(window).scrollTop() > window.half_sixth_elemant_position) {
+          if (-15 + (($(window).scrollTop() - window.half_sixth_elemant_position) / 52.66) <= 2.52) {
+            $("#ls-sixth-f .absolute-eleman").css({
+              "top": -3 + (($(window).scrollTop() - window.half_sixth_elemant_position) / 200.33) + "rem",
+              "left": -13 + (($(window).scrollTop() - window.half_sixth_elemant_position) / 38.33) + "rem"
+            });
+          }
+        }
+        if ($(window).scrollTop() > (window.half_sixth_elemant_position) + 250) {
+          if (-15 + (($(window).scrollTop() - window.half_sixth_elemant_position) / 52.66) <= 2.52) {
+            $("#ls-sixth-s .absolute-eleman").css({
+              "top": -3 + (($(window).scrollTop() - window.half_sixth_elemant_position) / 200.33) + "rem",
+              "left": -13 + (($(window).scrollTop() - window.half_sixth_elemant_position) / 38.33) + "rem"
+            });
+          }
+        }
+        }
+        // fifth side
+
+       
+
+
+
+        // }
+        // console.log(window.get_first_elemant_position);
+        // console.log("scrolltotpo:"+ $(window).scrollTop());
+        // console.log(window.half_first_elemant_position);
+        // console.log("-");
+        // console.log("calculator:");
+        // console.log((($(window).scrollTop()-window.half_first_elemant_position)) );
+        // console.log("-");
+        // console.log(-125+(($(window).scrollTop()-window.half_first_elemant_position)) );
+        // console.log("-");
+        // console.log($(window).scrollTop()+"::");
+        // console.log(window.half_first_elemant_position);
+        // console.log("-=");
+        // console.log((window.half_first_elemant_position)+250);
+
+        // console.log("-");
+        /*
+
+                  if((-125+(($(window).scrollTop()-window.half_first_elemant_position)/4.96))<=0){
+                    if($(window).scrollTop()>window.half_first_elemant_position){
+                      $("#first-left-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_first_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_first_elemant_position)/1.8))});
+                      
+                      $("#first-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+parseInt(($(window).scrollTop()-window.half_first_elemant_position)/4.96),"margin-left":330-(parseInt(($(window).scrollTop()-window.half_first_elemant_position)/1.8))});
+                    
+                      $("#first-right-side-row .side-eleman:nth-child(2)").css
+                      ({"margin-top":-125+parseInt(($(window).scrollTop()-window.half_first_elemant_position)/4.96),"margin-left":330-(parseInt(($(window).scrollTop()-window.half_first_elemant_position)/1.8))});
+
+                      $("#first-right-side-row .side-eleman:nth-child(3)").css
+                      ({"margin-top":-125+parseInt(($(window).scrollTop()-window.half_first_elemant_position)/4.96),"margin-left":330-(parseInt(($(window).scrollTop()-window.half_first_elemant_position)/1.8))});
+
+                    }
+                  }else{
+                    $("#first-left-side-row .side-eleman:first-child").css({"margin-top":0,"margin-left":0});
+
+                  }
+
+                  if((-125+(($(window).scrollTop()-window.half_sec_elemant_position)/4.96))<=0){
+                    if($(window).scrollTop()>window.half_sec_elemant_position){
+                      $("#sec-left-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_sec_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_sec_elemant_position)/1.8))});
+                      
+                      $("#sec-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_sec_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_sec_elemant_position)/1.5))});
+                     
+                      $("#sec-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_sec_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_sec_elemant_position)/1.6))});
+                      
+                      $("#sec-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_sec_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_sec_elemant_position)/1.7))});
+                      
+                      $("#sec-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_sec_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_sec_elemant_position)/1.8))});
+                    }
+                  }else{
+                    $("#sec-left-side-row .side-eleman:first-child").css({"margin-top":0,"margin-left":0});
+
+                  }
+
+                  if((-125+(($(window).scrollTop()-window.half_third_elemant_position)/4.96))<=0){
+                    if($(window).scrollTop()>window.half_third_elemant_position){
+                      $("#third-left-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_third_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_third_elemant_position)/1.8))});
+
+                      $("#third-left-side-row .side-eleman:nth-child(2)").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_third_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_third_elemant_position)))});
+                      
+
+                      $("#third-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_third_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_third_elemant_position)/1.7))});
+                    
+                      $("#third-right-side-row .side-eleman:nth-child(2)").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_third_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_third_elemant_position)/1.6))});
+                      
+                      $("#third-right-side-row .side-eleman:nth-child(3)").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_third_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_third_elemant_position)/1.8))});
+                    }
+                  }else{
+                    $("#third-left-side-row .side-eleman:first-child").css({"margin-top":0,"margin-left":0});
+
+                  }
+
+                  if((-125+(($(window).scrollTop()-window.half_forth_elemant_position)/4.96))<=0){
+                    if($(window).scrollTop()>window.half_forth_elemant_position){
+                      $("#forth-left-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_forth_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_forth_elemant_position)/1.8))});
+                      
+                      $("#forth-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_forth_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_forth_elemant_position)/1.8))});
+                    }
+                  }else{
+                    $("#forth-left-side-row .side-eleman:first-child").css({"margin-top":0,"margin-left":0});
+
+                  }
+
+                  if((-125+(($(window).scrollTop()-window.half_fifth_elemant_position)/4.96))<=0){
+                    if($(window).scrollTop()>window.half_fifth_elemant_position){
+                      $("#fifth-left-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_fifth_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_fifth_elemant_position)/1.4))});
+                      
+                      $("#fifth-left-side-row .side-eleman:nth-child(2)").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_fifth_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_fifth_elemant_position)/1.5))});
+                      
+                      $("#fifth-left-side-row .side-eleman:nth-child(3)").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_fifth_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_fifth_elemant_position)/1.8))});
+                      
+                      $("#fifth-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_fifth_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_fifth_elemant_position)/1.8))});
+                    }
+                  }else{
+                    $("#fifth-left-side-row .side-eleman:first-child").css({"margin-top":0,"margin-left":0});
+
+                  }
+
+                  if((-125+(($(window).scrollTop()-window.half_sixth_elemant_position)/4.96))<=0){
+                    if($(window).scrollTop()>window.half_sixth_elemant_position){
+                      $("#sixth-left-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.sixth_fifth_elemant_position)/4.96),"margin-left":-330+((($(window).scrollTop()-window.half_sixth_elemant_position)/1.8))});
+                      
+                      $("#sixth-right-side-row .side-eleman:first-child").css
+                      ({"margin-top":-125+(($(window).scrollTop()-window.half_sixth_elemant_position)/4.96),"margin-left":330-((($(window).scrollTop()-window.half_sixth_elemant_position)/1.8))});
+                    }
+                  }else{
+                    $("#sixth-left-side-row .side-eleman:first-child").css({"margin-top":0,"margin-left":0});
+
+                  }
+                  */
+
+
+      });
+
+    });
+  </script>
+</body>
+
+</html>
